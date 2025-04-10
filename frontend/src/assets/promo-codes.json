@@ -1,0 +1,24 @@
+{
+  "promoCodes": [
+    {
+      "code": "WELCOME5",
+      "discount": 5,
+      "description": "Get $5 off on your first order",
+      "isActive": true
+    },
+    {
+      "code": "SAVE10",
+      "discount": 10,
+      "description": "Get $10 off on orders above $50",
+      "isActive": true,
+      "minOrderAmount": 50
+    },
+    {
+      "code": "FREESHIP",
+      "discount": 0,
+      "description": "Free shipping on your order",
+      "isActive": true,
+      "freeShipping": true
+    }
+  ]
+} 

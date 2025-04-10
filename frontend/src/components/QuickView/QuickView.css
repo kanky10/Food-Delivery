@@ -1,0 +1,267 @@
+.quick-view-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.quick-view-modal {
+    background: white;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 8px;
+}
+
+.close-btn img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.close-btn:hover img {
+    transform: rotate(90deg);
+}
+
+.quick-view-content {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+}
+
+.quick-view-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.quick-view-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.quick-view-details {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.quick-view-details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.rating-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rating-price img {
+    height: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff4d4d;
+}
+
+.description-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description.expanded {
+    -webkit-line-clamp: unset;
+    display: block;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.read-more-btn:hover {
+    color: #ff3333;
+    text-decoration: underline;
+}
+
+.food-item-desc {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cart-actions {
+    margin-bottom: 30px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f8f8f8;
+    border-radius: 30px;
+    padding: 8px 20px;
+    display: inline-flex;
+}
+
+.quantity-controls button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.quantity-controls button img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.quantity-controls button:hover img {
+    transform: scale(1.1);
+}
+
+.quantity-controls span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    min-width: 30px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff3333;
+    transform: translateY(-2px);
+}
+
+.additional-info {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.additional-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.additional-info p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.dietary-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dietary-tags span {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .quick-view-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .quick-view-image {
+        max-width: 100%;
+    }
+
+    .quick-view-image img {
+        height: 300px;
+    }
+
+    .quick-view-details {
+        padding: 0;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+    }
+} 
